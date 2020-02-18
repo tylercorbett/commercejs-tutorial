@@ -1,3 +1,18 @@
 .App {
   
+  ul {
+    list-style-type: none;
+    
+    .img-container {
+      position: relative;
+      object-fit: cover;
+      max-height: 15rem;
+      width: 13rem;
+      overflow: hidden;
+  
+      img {
+        width: 100%; 
+      }
+    }
+  }
 }

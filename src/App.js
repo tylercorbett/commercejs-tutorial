@@ -8,10 +8,22 @@ function App() {
   useEffect(() => {
     getProducts.then(myProducts => setProducts(myProducts.data))
   }, []);
-  console.log(products, 'products');
+
   return (
     <div className="App">
       <h1>hello world</h1>
+      {products && <ul>
+        {products.map((product, i) => {
+          console.log(product)
+          return (
+            <li key={i}>
+              <div className="img-container">
+                <img src={product.url} alt='Product'/>
+              </div>
+            </li>
+          );
+        })}
+      </ul>}
     </div>
   );
 }
