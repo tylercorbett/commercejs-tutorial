@@ -1,17 +1,70 @@
 .App {
-  
-  ul {
-    list-style-type: none;
-    
-    .img-container {
-      position: relative;
-      object-fit: cover;
-      max-height: 15rem;
-      width: 13rem;
+  text-align: center;
+
+  h1 {
+    background: purple;
+    color: white;
+    padding: 1rem;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+
+    .product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 20rem;
+      border: 1px solid lightgray;
+      border-radius: 1rem;
+      margin: 1rem;
       overflow: hidden;
+
+      .img-container {
+        position: relative;
+        object-fit: contain;
+        height: 7rem;
+        width: 13rem;
+        overflow: hidden;
+    
+        img {
+          width: 100%; 
+        }
+      }
   
-      img {
-        width: 100%; 
+      .name-price {
+        margin-bottom: .5rem;
+        background: rgb(233, 74, 74);
+        width: 100%;
+        padding: .5rem;
+        color: white;
+        
+        .name {
+          font-size: 1.6rem;
+          font-weight: bold;
+          margin: 0 1rem;
+        }
+
+        .price {
+          font-size: 1.2rem;
+          font-weight: thin;
+        }
+      }
+
+      .buy-now {
+        text-decoration: none;
+        color: rgb(30, 73, 30);
+        border: 1px solid green;
+        padding: .3rem .5rem;
+        border-radius: .3rem;
+        margin: .4rem;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          color: white;
+          background: green;
+        }
       }
     }
   }

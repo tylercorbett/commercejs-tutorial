@@ -9,8 +9,10 @@ const requestOptions = {
   redirect: 'follow'
 };
 
-export const getProducts = fetch("https://api.chec.io/v1/assets", requestOptions)
+export const getProducts = fetch("https://api.chec.io/v1/products", requestOptions)
   .then(response => response.json())
   .then(result => result)
   .catch(error => console.log('error', error)
 );
+
+

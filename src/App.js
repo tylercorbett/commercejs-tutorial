@@ -6,24 +6,35 @@ function App() {
   const [products, setProducts] = useState(null);
 
   useEffect(() => {
-    getProducts.then(myProducts => setProducts(myProducts.data))
+    getProducts.then(myProducts => setProducts(myProducts.data));
   }, []);
 
   return (
     <div className="App">
-      <h1>hello world</h1>
-      {products && <ul>
+      <h1>My Store</h1>
+      {products && <section>
         {products.map((product, i) => {
-          console.log(product)
+          console.log(product);
           return (
-            <li key={i}>
-              <div className="img-container">
-                <img src={product.url} alt='Product'/>
+            <div className="product" key={i}>
+              <div className="name-price">
+                <span className="name">
+                  {product.name}
+                </span>
+                <span className="price">
+                  {product.price.formatted_with_symbol}
+                </span>
               </div>
-            </li>
+              <div className="img-container">
+                <img src={product.media.source} alt='Product'/>
+              </div>
+              <a className="buy-now" href={product.checkout_url.checkout} rel="noopener noreferrer" target="_blank">
+                Buy Now
+              </a>
+            </div>
           );
         })}
-      </ul>}
+      </section>}
     </div>
   );
 }
