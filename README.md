@@ -38,5 +38,21 @@ Let's start by creating a basic project to start with. I personally love to use 
 
 ![React App](/src/images/react-app.png)
 
-## 
+## Set Up Your Chec Dashboard
+
+[Click here](https://dashboard.chec.io/login) to sign up for an account.
+
+Once you've done that, we need two things:
+1. Products to sell [Click here](https://dashboard.chec.io/products)
+1. Our secret API key [Click here](https://dashboard.chec.io/setup/developer)
+
+[Click here for help with setting up a product to sell](http://support.commercejs.com/en/articles/513221-adding-a-product)
+
+![React App](/src/images/sandbox-key.png)
+
+* Note: We're using our sandbox secret key for practice, if you want to set up your shop for real make sure you use the key labeled "Secret Key"
+
+
+
+
 
