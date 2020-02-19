@@ -5,6 +5,8 @@
 
 ![Preview](/src/images/store.png)
 
+___
+
 #### Overview
 1. Set up your Chec dashboard with products
 1. Fetch our product data using Chec's API
