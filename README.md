@@ -3,7 +3,9 @@
 
 ### [Live Demo](https://commercejs-tutorial.netlify.com/)
 
-![Preview](https://prnt.sc/r4d473)
+![Preview](/src/images/store.png)
+
+___
 
 #### Overview
 1. Set up your Chec dashboard with products
@@ -27,4 +29,14 @@
 
 ###### Author
 [Tyler Corbett](https://tylercorbett.me/)
+
+____
+
+## Get Started - Create React App
+ 
+Let's start by creating a basic project to start with. I personally love to use [Create React App](https://reactjs.org/docs/create-a-new-react-app.html). But any basic project with React will work.
+
+![React App](/src/images/react-app.png)
+
+## 
 
