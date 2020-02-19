@@ -52,6 +52,32 @@ Once you've done that, we need two things:
 
 * Note: We're using our sandbox secret key for practice, if you want to set up your shop for real make sure you use the key labeled "Secret Key"
 
+## Let's code
+
+First let's set up our service to get the data from our Chec dashboard
+
+```javascript
+const myHeaders = new Headers();
+myHeaders.append("X-Authorization", "YOUR SANDBOX API KEY HERE");
+myHeaders.append("Accept", "application/json");
+myHeaders.append("Content-Type", "application/json");
+
+const requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+export const getProducts = fetch("https://api.chec.io/v1/products", requestOptions)
+  .then(response => response.json())
+  .then(result => result)
+  .catch(error => console.log('error', error)
+);
+
+
+
+```
+
 
 
 
