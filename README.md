@@ -3,7 +3,7 @@
 
 ### [Live Demo](https://commercejs-tutorial.netlify.com/)
 
-![Preview](https://prnt.sc/r4d473)
+![Preview](/src/images/store.png)
 
 #### Overview
 1. Set up your Chec dashboard with products
