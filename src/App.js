@@ -14,7 +14,6 @@ function App() {
       <h1>My Store</h1>
       {products && <section>
         {products.map((product, i) => {
-          console.log(product);
           return (
             <div className="product" key={i}>
               <div className="name-price">
