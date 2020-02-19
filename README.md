@@ -73,12 +73,68 @@ export const getProducts = fetch("https://api.chec.io/v1/products", requestOptio
   .then(result => result)
   .catch(error => console.log('error', error)
 );
-
-
-
 ```
 
+Now we can make use of our `getProducts` service in our app like so:
+ 
+```javascript
+import React, { useState, useEffect } from 'react';
+import './App.scss';
+import { getProducts } from './services/product';
 
+function App() {
+  const [products, setProducts] = useState(null);
 
+  useEffect(() => {
+    getProducts.then(myProducts => setProducts(myProducts.data));
+  }, []);
 
+  return (
+    <div className="App">
+      <h1>My Store</h1>
+    </div>
+  );
+}
+```
 
+Finally - we can map through our proucts and use any of the data we like. In this case, I make use of the image, price, name, and checkout link. Feel free to experiment with any of the data you'd like!
+
+```javascript
+function App() {
+  const [products, setProducts] = useState(null);
+
+  useEffect(() => {
+    getProducts.then(myProducts => setProducts(myProducts.data));
+  }, []);
+
+  return (
+    <div className="App">
+      <h1>My Store</h1>
+      {products && <section>
+        {products.map((product, i) => {
+          return (
+            <div className="product" key={i}>
+              <div className="name-price">
+                <span className="name">
+                  {product.name}
+                </span>
+                <span className="price">
+                  {product.price.formatted_with_symbol}
+                </span>
+              </div>
+              <div className="img-container">
+                <img src={product.media.source} alt='Product'/>
+              </div>
+              <a className="buy-now" href={product.checkout_url.checkout} rel="noopener noreferrer" target="_blank">
+                Buy Now
+              </a>
+            </div>
+          );
+        })}
+      </section>}
+    </div>
+  );
+}
+```
+
+Questions? [Check the support page here](http://support.commercejs.com/en)
